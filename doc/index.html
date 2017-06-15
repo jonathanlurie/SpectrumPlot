@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#SpectrumPlot'
+                class='block bold'>
+                SpectrumPlot
+              </a>
+                <a
+                  href='#SpectrumPlot._initPlot'
+                  class='regular block'>
+                  #_initPlot
+                </a>
+                <a
+                  href='#SpectrumPlot.constructor'
+                  class='regular block'>
+                  #constructor
+                </a>
+                <a
+                  href='#SpectrumPlot.getChartistPlot'
+                  class='regular block'>
+                  #getChartistPlot
+                </a>
+                <a
+                  href='#SpectrumPlot.setLineColor'
+                  class='regular block'>
+                  #setLineColor
+                </a>
+                <a
+                  href='#SpectrumPlot.updateLabels'
+                  class='regular block'>
+                  #updateLabels
+                </a>
+                <a
+                  href='#SpectrumPlot.updateSeries'
+                  class='regular block'>
+                  #updateSeries
+                </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='SpectrumPlot' class='mt0'>
+    SpectrumPlot<span class='gray'>(parentContainer, options)</span>
+  </h2>
+  <p>Draw a line plot with as many series as you want</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li> <strong>parentContainer</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li> <strong>options</strong>
+            (default <code>{}</code>)
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='SpectrumPlot._initPlot'>
+          <a href='#SpectrumPlot._initPlot'>
+            <code>
+              #_initPlot<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>[PRIVATE]
+Initialize the plot object</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot._initPlot' class='mt0'>
+                _initPlot<span class='gray'></span>
+              </h2>
+              <p>[PRIVATE]
+            Initialize the plot object</p>
+            
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='SpectrumPlot.constructor'>
+          <a href='#SpectrumPlot.constructor'>
+            <code>
+              #constructor<span class='gray'>(parentContainer, options)</span>
+            </code>
+            <div class='force-inline'>
+              
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot.constructor' class='mt0'>
+                constructor<span class='gray'>(parentContainer, options)</span>
+              </h2>
+              
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>parentContainer</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>can be a div id {string} or directly a div element. Will host the plot.</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>options</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>can contain plotSettings {Object} that complies with Chartist options</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='SpectrumPlot.getChartistPlot'>
+          <a href='#SpectrumPlot.getChartistPlot'>
+            <code>
+              #getChartistPlot<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Get the Chartist plot object so that it&apos;s still easy to tune from the outside</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot.getChartistPlot' class='mt0'>
+                getChartistPlot<span class='gray'></span>
+              </h2>
+              <p>Get the Chartist plot object so that it&apos;s still easy to tune from the outside</p>
+            
+                  <h4>Returns</h4>
+                  <code><code>Chartist.Line</code></code>
+                  :
+                  <div class='force-inline'>
+                    <p>the plot object</p>
+            
+                  </div>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='SpectrumPlot.setLineColor'>
+          <a href='#SpectrumPlot.setLineColor'>
+            <code>
+              #setLineColor<span class='gray'>(curveIndex, cssColor)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Define the color of a cuve</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot.setLineColor' class='mt0'>
+                setLineColor<span class='gray'>(curveIndex, cssColor)</span>
+              </h2>
+              <p>Define the color of a cuve</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>curveIndex</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>the index of the curve, starting at 0</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>cssColor</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>color represented by a css-cmopliant string</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='SpectrumPlot.updateLabels'>
+          <a href='#SpectrumPlot.updateLabels'>
+            <code>
+              #updateLabels<span class='gray'>(labels)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Update the labels, should be the same size as data series</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot.updateLabels' class='mt0'>
+                updateLabels<span class='gray'>(labels)</span>
+              </h2>
+              <p>Update the labels, should be the same size as data series</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>labels</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>label for each point of the series</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='SpectrumPlot.updateSeries'>
+          <a href='#SpectrumPlot.updateSeries'>
+            <code>
+              #updateSeries<span class='gray'>(series)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Update the series of data. Create random colors if not enought colors are set.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='SpectrumPlot.updateSeries' class='mt0'>
+                updateSeries<span class='gray'>(series)</span>
+              </h2>
+              <p>Update the series of data. Create random colors if not enought colors are set.</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>series</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>can be an array of Number or an Array of Arrays of numbers</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

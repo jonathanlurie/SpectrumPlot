@@ -1,19 +1,118 @@
 <html>
 <head>
-  <title>Test</title>
-</head>
-<body>
+  <title>SpectrumPlot Example</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  
   <!-- importing the automatically build module -->
   <script src="../dist/SpectrumPlot.js"></script>
-
-  <p>Open Javascript console.</p>
-
+  
+  <style>
+  
+  body {
+    margin: 0;
+    background-color: #ccfffe;
+  }
+  
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    color: #04c5c0;
+    margin-bottom: initial;
+    margin-top: 80px;
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    color: #04c5c0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ca00b7;
+    transition: all 0.2s;
+  }
+  
+  a:hover {
+    color: #ff8ff4;
+  }
+  
+  #container {
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+  
+  #chartDiv {
+    width: 50vw;
+    height: 50vh;
+    background-color: #fafafa;
+    margin-top: 50px;
+  }
+  
+  </style>
+  
+</head>
+<body>
+  
+  <div id="container">
+    <h1>SpectrumPlot</h1>
+    <h2><a href="https://github.com/jonathanlurie/SpectrumPlot">fork it on Github</a></h2>
+    <div id="chartDiv"></div>
+  </div>
   <script>
 
     // the foo object is part of our ES6MOD module
-    var spectrumPlot = new SpectrumPlot.SpectrumPlot();
+    var spectrumPlot = new SpectrumPlot.SpectrumPlot( "chartDiv", );
 
+    var seriesSize = 200;
+    var series1 = new Array(seriesSize);
+    var series2 = new Array(seriesSize);
+    var series3 = new Array(seriesSize);
+    var series4 = new Array(seriesSize);
+    var series5 = new Array(seriesSize);
+    
+    for(var i=0; i<seriesSize; i++){
+      series1[i] = Math.random() * 10;
+      series2[i] = Math.random() * 10 + 20;
+      series3[i] = Math.random() * 10 + 40;
+      series4[i] = Math.random() * 10 + 60;
+      series5[i] = Math.random() * 10 + 80;
+    }
 
+    spectrumPlot.updateSeries( [series1, series2, series3, series4, series5])
+    spectrumPlot.setLineColor(4, '#F50');
+    
+    
+    addEventListener('mousemove', moveMouse, false);
+    
+    
+    function moveMouse(evt){
+      var seriesSize = 200;
+      var series1 = new Array(seriesSize);
+      var series2 = new Array(seriesSize);
+      var series3 = new Array(seriesSize);
+      var series4 = new Array(seriesSize);
+      var series5 = new Array(seriesSize);
+      
+      for(var i=0; i<seriesSize; i++){
+        series1[i] = Math.random() * 10;
+        series2[i] = Math.random() * 10 + 20;
+        series3[i] = Math.random() * 10 + 40;
+        series4[i] = Math.random() * 10 + 60;
+        series5[i] = Math.random() * 10 + 80;
+      }
+
+      spectrumPlot.updateSeries( [series1, series2, series3, series4, series5])
+    }
+    
+    
   </script>
 
 </body>
